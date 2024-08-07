@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 Django settings for config project.
 
@@ -10,6 +11,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+=======
+>>>>>>> 3ba9fba (update codebase to bootstrap 5)
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -23,7 +26,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = "django-insecure-4z#hr@3e0_#g@v%nsi^png2d6zr_shqo$s0ful0*55%vkhhmtv"
+=======
+SECRET_KEY = "django-insecure-kuix^bjtq+_v3nqvag06lh7n1)ogowk%uo6!0%yp659316^usa"
+>>>>>>> 3ba9fba (update codebase to bootstrap 5)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -52,10 +59,19 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     "crispy_forms",
+<<<<<<< HEAD
     "widget_tweaks",
     "template_partials",
     # Local Apps
     "blog",
+=======
+    "crispy_bootstrap5",
+    "widget_tweaks",
+    "template_partials",
+    "django_htmx",
+    # Local Apps
+    'blog',
+>>>>>>> 3ba9fba (update codebase to bootstrap 5)
 ]
 
 MIDDLEWARE = [
@@ -67,7 +83,12 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+<<<<<<< HEAD
     "allauth.account.middleware.AccountMiddleware"
+=======
+    "allauth.account.middleware.AccountMiddleware",
+    "django_htmx.middleware.HtmxMiddleware",
+>>>>>>> 3ba9fba (update codebase to bootstrap 5)
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -157,4 +178,10 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
+<<<<<<< HEAD
 CRISPY_TEMPLATE_PACK = "tailwind"
+=======
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+>>>>>>> 3ba9fba (update codebase to bootstrap 5)

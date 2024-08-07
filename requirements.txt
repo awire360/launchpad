@@ -8,6 +8,10 @@ python-dotenv
 django-widget-tweaks
 django-htmx
 django-filter
+<<<<<<< HEAD
 crispy-tailwind
+=======
+crispy-bootstrap5
+>>>>>>> 3ba9fba (update codebase to bootstrap 5)
 django-template-partials
 django-unfold
