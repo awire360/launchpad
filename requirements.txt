@@ -1,0 +1,13 @@
+Django
+django-debug-toolbar
+django-extensions
+django-allauth
+django-crispy-forms
+Pillow
+python-dotenv
+django-widget-tweaks
+django-htmx
+django-filter
+crispy-tailwind
+django-template-partials
+django-unfold
