@@ -7,4 +7,13 @@
 {% block content %}
     <h1>Blog</h1>
 
+    {% if user.is_authenticated %}
+    <p>True</p>
+    {% else %}
+    <p>False</p>
+    {% endif %}
+    <div class="" id="index-container">
+    </div>
+
+
 {% endblock content %}
