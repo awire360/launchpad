@@ -157,7 +157,7 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
-<<<<<<< HEAD
+
 if DEBUG:
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 else:
@@ -213,4 +213,3 @@ MFA_PASSKEY_LOGIN_ENABLED = True
 
 if DEBUG:
     MFA_WEBAUTHN_ALLOW_INSECURE_ORIGIN = True
-
