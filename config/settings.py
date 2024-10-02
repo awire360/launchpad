@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from user.models import User
 
 load_dotenv()  # take environment variables from .env.
 
@@ -24,12 +25,12 @@ if DEBUG:
 
 INSTALLED_APPS = [
     "unfold",  # before django.contrib.admin
-    #"unfold.contrib.filters",  # optional, if special filters are needed
-    #"unfold.contrib.forms",  # optional, if special form elements are needed
-    #"unfold.contrib.inlines",  # optional, if special inlines are needed
-    #"unfold.contrib.import_export",  # optional, if django-import-export package is used
-    #"unfold.contrib.guardian",  # optional, if django-guardian package is used
-    #"unfold.contrib.simple_history",  # optional, if django-simple-history package is used
+    # "unfold.contrib.filters",  # optional, if special filters are needed
+    # "unfold.contrib.forms",  # optional, if special form elements are needed
+    # "unfold.contrib.inlines",  # optional, if special inlines are needed
+    # "unfold.contrib.import_export",  # optional, if django-import-export package is used
+    # "unfold.contrib.guardian",  # optional, if django-guardian package is used
+    # "unfold.contrib.simple_history",  # optional, if django-simple-history package is used
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -46,10 +47,10 @@ INSTALLED_APPS = [
     "widget_tweaks",
     "template_partials",
     "django_htmx",
+    "django_countries",
     # Local Apps
-    'blog',
-    'core',
-    'secret',
+    "blog",
+    "user",
 ]
 
 MIDDLEWARE = [
@@ -156,6 +157,7 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
+<<<<<<< HEAD
 if DEBUG:
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 else:
@@ -181,3 +183,34 @@ MFA_SUPPORTED_TYPES = ["totp", "webauthn", "recovery_codes"]
 # Optional: enable support for logging in using a (WebAuthn) passkey.
 MFA_PASSKEY_LOGIN_ENABLED = True
 
+=======
+AUTH_USER_MODEL = "user.User"
+
+# django-allauth settings
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
+ACCOUNT_AUTHENTICATION_METHOD = "email"
+ACCOUNT_CHANGE_EMAIL = True
+
+ACCOUNT_FORMS = {
+    "add_email": "allauth.account.forms.AddEmailForm",
+    "change_password": "allauth.account.forms.ChangePasswordForm",
+    "confirm_login_code": "allauth.account.forms.ConfirmLoginCodeForm",
+    "login": "allauth.account.forms.LoginForm",
+    "request_login_code": "allauth.account.forms.RequestLoginCodeForm",
+    "reset_password": "allauth.account.forms.ResetPasswordForm",
+    "reset_password_from_key": "allauth.account.forms.ResetPasswordKeyForm",
+    "set_password": "allauth.account.forms.SetPasswordForm",
+    "signup": "allauth.account.forms.SignupForm",
+    "user_token": "allauth.account.forms.UserTokenForm",
+}
+
+ACCOUNT_LOGIN_BY_CODE_ENABLED = False
+
+MFA_SUPPORTED_TYPES = ["webauthn", "totp"]
+MFA_PASSKEY_LOGIN_ENABLED = True
+
+if DEBUG:
+    MFA_WEBAUTHN_ALLOW_INSECURE_ORIGIN = True
+>>>>>>> 148898c (.)
