@@ -183,7 +183,7 @@ MFA_SUPPORTED_TYPES = ["totp", "webauthn", "recovery_codes"]
 # Optional: enable support for logging in using a (WebAuthn) passkey.
 MFA_PASSKEY_LOGIN_ENABLED = True
 
-=======
+
 AUTH_USER_MODEL = "user.User"
 
 # django-allauth settings
@@ -213,4 +213,4 @@ MFA_PASSKEY_LOGIN_ENABLED = True
 
 if DEBUG:
     MFA_WEBAUTHN_ALLOW_INSECURE_ORIGIN = True
->>>>>>> 148898c (.)
+
